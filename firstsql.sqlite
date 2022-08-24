@@ -5,35 +5,48 @@ CREATE TABLE friends (
 );
 
 INSERT INTO friends (id, name, birthday)
-VALUES (1, 'Ororo Munroe', '1940-05-30');
-
-
+VALUES (1, 'Ororo Munroe','1940-05-30');
 
 INSERT INTO friends (id, name, birthday)
-VALUES (2, 'Claire Bedford', '1982-08-19');
+VALUES (2, 'Claire Stewart','1982-08-19');
 
 INSERT INTO friends (id, name, birthday)
-VALUES (3, 'Louie Stewart', '2018-02-28');
+VALUES (3, 'Andy Bainbridge','1977-08-23');
 
-SELECT * FROM friends;
+SELECT *
+FROM friends;
 
 UPDATE friends
 SET name = 'Storm'
 WHERE id = 1;
 
-SELECT * FROM friends;
+SELECT *
+FROM friends;
 
 
 ALTER TABLE friends
-ADD COLUMN  email TEXT;
+ADD COLUMN email TEXT;
+
+SELECT *
+FROM friends;
 
 UPDATE friends
 SET email = 'storm@codecademy.com'
 WHERE id = 1;
 
-SELECT * FROM friends;
+UPDATE friends
+SET email = 'bedford.claire@googlemail.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'andyb1977@gmail.com'
+WHERE id = 3;
+
+SELECT *
+FROM friends;
 
 DELETE FROM friends
 WHERE id = 1;
 
-SELECT * FROM friends;
+SELECT *
+FROM friends;
